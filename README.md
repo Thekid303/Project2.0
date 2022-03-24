@@ -32,7 +32,3 @@ Contact us:
 <a class="hoverable" href="https://github.com/dugan-jo" target="_blank"> Joseph Dugan</a> |
 <a class="hoverable" href="https://github.com/mfandel118" target="_blank"> Marissa Fandel</a> |
 <a class="hoverable" href="https://github.com/Thekid303" target="_blank"> Nick Graves</a>
-
-# Project-2-
-
-# Project2.0
