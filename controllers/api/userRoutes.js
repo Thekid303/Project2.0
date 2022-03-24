@@ -3,7 +3,7 @@ const { restart } = require('nodemon');
 const { User } =require('../../models/User');
 
 
-router.post('./', async (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const newUser = await User.create({
             user_firstName: req.body.user_firstName,
@@ -24,7 +24,7 @@ router.post('./', async (req, res) => {
     }
 });
 
-// router.post('./login', async, (req, res) => {
+// router.post('/login', async, (req, res) => {
 //     try {
 //         const user = await User.findOne({
 //             where: {
@@ -57,7 +57,7 @@ router.post('./', async (req, res) => {
 //     }
 // });
 
-// router.post('./logout', (req, res) => {
+// router.post('/logout', (req, res) => {
 //     if(req.session.loggedIn) {
 //         res.status(204).end();
 //     }
