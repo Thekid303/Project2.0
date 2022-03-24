@@ -1,5 +1,5 @@
 <div class="posts">
-  {{#each projects}}
+  {{#each project}}
   <article class="card">
     <div class="card-header d-flex justify-content-center">
       <h2>
@@ -10,8 +10,8 @@
       {{!-- project info --}}
       {{description}}
       {{budget ? }}
-      {{employees ? }}
-      {{hours-spent ? }}
+      {{user.name}}
+      {{comment.hours}}
     </div>
   </article>
   {{/each}}
