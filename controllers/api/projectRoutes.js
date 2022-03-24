@@ -25,7 +25,7 @@ const withAuth = require('../../utils/auth');
 //    POST NEW PROJECT    //
 //                        //
 ////////////////////////////
-router.post('./', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
         const newProject = await Project.create({
             ...req.body,
