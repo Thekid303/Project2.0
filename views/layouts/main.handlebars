@@ -1,0 +1,39 @@
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{! add a logo }}
+    <title>Project Tracker</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="main_bar">
+        <h4>NAME OF WEBSITE</h4>
+        <p>WEBSITE PHRASE?</p>
+      </div>
+      <nav>
+        <a href="/">HOME</a>
+        {{#if loggedIn}}
+          <button id="logout" class="btn-no-style">LOGOUT</button>
+        {{else}}
+          <a href="/login">LOGIN</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main>
+        <div class="welcome-page">
+            <img src="https://unsplash.com/photos/4ifGPw7n5Qs" alt="beach">
+        </div>
+        {{#if loggedIn}}
+        <script src="/js/logout.js"></script>
+        {{/if}}
+    </main>
+    <footer>
+
+    </footer>
+    
+  </body>
+</html>
