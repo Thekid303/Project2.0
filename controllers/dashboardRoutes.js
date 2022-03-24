@@ -24,7 +24,7 @@ router.get('/', withAuth, async (req, res) => {
             projects,
         })
     } catch (err) {
-        res.redirect('login')
+        res.redirect('signup')
     }
 });
 

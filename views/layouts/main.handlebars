@@ -5,10 +5,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Hub</title>
+  <link rel="stylesheet" href="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==">
   <link rel="stylesheet" href="/css/style.css">
+
 </head>
 
 <body class="flex-column min-100-vh">
+  {{!-- {{> header}} --}}
   <nav class="navbar">
     <ul>
       <li class="li-inline nav-item"><a href="/">HOME</a></li>
@@ -24,10 +27,9 @@
     {{{body}}}
   </main>
 
-  <footer class="flex-row justify-center">
-    &copy; Project Hub
+  <footer class="flex-row">
+    {{> footer}}
   </footer>
 </body>
-
-</html>
 <script src="/js/logout.js"></script>
+</html>

@@ -2,7 +2,29 @@ const router = require('express').Router();
 const { Project } =require('../../models/Project');
 const withAuth = require('../../utils/auth');
 
+////////////////////////////
+//                        //
+//    GET ALL PROJECTS    //
+//                        //
+////////////////////////////
 
+
+
+
+/////////////////////////////
+//                         //
+//    GET PROJECT BY ID    //
+//                         //
+/////////////////////////////
+
+
+
+
+////////////////////////////
+//                        //
+//    POST NEW PROJECT    //
+//                        //
+////////////////////////////
 router.post('./', withAuth, async (req, res) => {
     try {
         const newProject = await Project.create({
