@@ -23,3 +23,4 @@ Comment.belongsTo(user, {
 });
 
 module.exports = { User, Project, Comment };
+

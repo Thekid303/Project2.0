@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    {{!-- need to make sure this link is correct! --}}
+    <link rel="stylesheet" href="../../public/ccs/style.css"> 
+</head>
+<body class="flex-col min-100-vh">
+    <nav class="navbar">
+        <ul class="flex-row">
+            <li class="li-inline nav-item"><a href="/">HOME</a></li>
+            <li class="li-inline nav-item"><a href="/dashboard">DASHBOARD</a></li>
+            <li class="li-inline nav-item"><a href="#">LOGOUT</a></li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <h1 class="app-name"><a href="/dashboard">WELCOME {{{user.firstName}}}</a></h1>
+    </header>
+    <main class="col-auto hero-image">
+        <div class="hero-text">
+            <h1>NAME OF APP</h1>
+        </div>
+        
+        {{{body}}}
+    </main>
+    <footer class="footer flex-row justify-center">
+        <a href="/dashboard/newUser">ADD NEW EMPLOYEE</a>
+        <a href="/dashboard/newProject">NEW PROJECT</a>  
+        <a href="/dashboard/editProject">ADD NEW TASK</a>   
+    </footer>
+</body>
+</html>
