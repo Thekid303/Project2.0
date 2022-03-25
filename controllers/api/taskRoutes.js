@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Task } = require("../../models")
+const { Task } = require("../../models");
 
 ////////////////////////
 //                    //
@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
     //Rest Arc Patter
     try {
       // search the database and findAll Project(s)
-      const postData = await User.findAll();
+      const postData = await Task.findAll();
       console.log(postData)
       // We use .get({ plain: true }) on the object (postData) to serialize to get all project(s)
       const tasks = postData.map(task => task.get({ plain: true }));
@@ -29,3 +29,5 @@ router.get("/", async (req, res) => {
       console.log(err)
     }
 });
+
+module.exports = router;
