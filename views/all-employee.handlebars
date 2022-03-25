@@ -1,14 +1,14 @@
-<div class="posts">
-  {{#each projects}}
+<div class="users">
+  {{#each user}}
   <article class="card">
     <div class="card-header d-flex justify-content-center">
       <h2>
-        <a href="/project/{{id}}">{{name}}</a>
+        <a href="/user/{{id}}">{{name}}</a>
       </h2>
     </div>
     <div class="card-body">
       {{!-- project info --}}
-      {{description}}
+      {{email}}
       {{!-- {{budget ? }} --}}
       {{!-- {{user.name}}
       {{comment.hours}} --}}
