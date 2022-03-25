@@ -1,14 +1,14 @@
-<div class="users">
-  {{#each employee}}
-  <article class="card">
-    <div class="card-header d-flex justify-content-center">
-      <h2>
-        <a href="/user/{{name}}">{{name}}</a>
-      </h2>
-    </div>
-    <div class="card-body">
-      {{email}}
-    </div>
-  </article>
-  {{/each}}
+<div class="container">
+  <div class="users mb-5 pb-5 row d-flex justify-content-center">
+    {{#each employee}}
+    <article class="card col-9 col-md-5 col-lg-4 p-3 m-3">
+      <div class="card-header d-flex justify-content-center bg-success">
+        <h2>{{name}}</h2>
+      </div>
+      <div class="card-body">
+        {{email}}
+      </div>
+    </article>
+    {{/each}}
+  </div>
 </div>
