@@ -29,7 +29,7 @@ router.get("/", async (req, res) => {
       ],
     });
 
-    const employee = userData.map(employee =>
+    const employee = userData.map((employee) =>
       employee.get({ plain: true })
     );
 
