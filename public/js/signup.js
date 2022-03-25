@@ -36,3 +36,6 @@ const signUpFormHandler = async function (event) {
   if (signUpBtn) {
     signUpBtn.addEventListener("click", signUpFormHandler);
   };
+
+
+
