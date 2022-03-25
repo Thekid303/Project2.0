@@ -3,7 +3,7 @@ const projectsHandler = async function (event) {
     event.preventDefault();
   
     try {  
-      const response = await fetch("/dashboard/projects", {
+      const response = await fetch("api/projects", {
         method: "POST",
         body: JSON.stringify({
           username: usernameEl.value,
@@ -16,7 +16,7 @@ const projectsHandler = async function (event) {
       // console.log(data);
   
       if (response.ok) {
-        document.location.replace('/dashboard/projects'); //if (200) 
+        document.location.replace('/api/projects'); //if (200) 
       } else {
         alert("Failed to login");
       }
