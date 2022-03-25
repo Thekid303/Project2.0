@@ -43,11 +43,7 @@ router.get("/", async (req, res) => {
   //Rest Arc Patter
   try {
     // search the database and findAll Project(s)
-    const postData = await Project.findAll() //{
-      // where: {
-      //   user_id: 2,
-      // },
-    // });
+    const postData = await Project.findAll()
     console.log(postData)
     // We use .get({ plain: true }) on the object (postData) to serialize to get all project(s)
     const projects = postData.map(project => project.get({ plain: true }));
