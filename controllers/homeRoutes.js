@@ -7,9 +7,8 @@ const { Project, User, Comment } = require("../models/index");
 //                    //
 ////////////////////////
 // GET -> -> http://localhost:3001/ <- <- GET //
-router.get("/", async (req, res) => {
-  res.render("home")
-  // (path.join(__dirname, '../views/layouts/main'));
+router.get("/", async (req, res) => {   //get request to localhost:3001/
+  res.render("home")                    //will respond with the rendered home handlebars template
 });
 
 //////////////////////////

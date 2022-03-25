@@ -7,7 +7,6 @@ const projectRoutes = require('./projectRoutes');
 //    MIDDLEWARE    //
 //                  //
 //////////////////////
-router.use('/projects', projectRoutes);
-router.use('/user', userRoutes);
+router.use('/dashboard', dashboardRoutes);
 
 module.exports = router;
