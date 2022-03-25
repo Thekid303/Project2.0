@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const { Project, User, Comment } = require("../models/index");
-const withAuth = require('../utils/auth');
+const { Project, User, Comment } = require("../../models/index");
+const withAuth = require('../../utils/auth');
 
 
 ////////////////////////////
@@ -79,7 +79,7 @@ router.get("./project/:id", async (req, res) => {
 // 
 // GET -> -> http://localhost:3001/project/{ID} <- <- GET //
 // async before a function means one thing --- always returns a promise. 
-router.get("./project/:id", async (req, res) => {
+router.get(".dashboard/project/:id", async (req, res) => {
 //Rest Arc Patter
   try {
       // search the database for a project with an id that matched params (primary ID)
@@ -129,9 +129,7 @@ router.post('/new-project', withAuth, (req, res) => {
 ////////////////////////////
 // POST -> -> http://localhost:3001/dashboard/new-employee <- <- POST //
 router.post('/new-employee', withAuth, (req, res) => {
-    res.render('new-employee', {     // Then, the 'new-employee' handlebar template is rendered on the 
-        layout: 'dashboard',         // dashboard template
-    });
+    res.render('new-employee')     // Then, the 'new-employee' handlebar template is rendered on the dashboard handlebar template
 });
 
 ///////////////////////////////////////////////////
@@ -139,10 +137,17 @@ router.post('/new-employee', withAuth, (req, res) => {
 //    ADD TASK/COMMENT TO AN EXISTING PROJECT    //
 //                                               //
 ///////////////////////////////////////////////////
-// POST -> -> http://localhost:3001/dashboard/new-task <- <- POST //
-router.post('/new-task', withAuth, (req, res) => {
-    // we need to link the userID and projectID with the task
-    // .then render only userName (= user.firstName + user.lastName) projectName and comment or task
+// POST -> -> http://localhost:3001/dashboard/new-comment <- <- POST //
+router.post('/new-comment', withAuth, (req, res) => {
+    res.render("new-comment")        //will respond with the rendered home handlebars template on the dashboard handlebar template
 })
+
+
+
+
+
+
+
+
 module.exports = router;
 
