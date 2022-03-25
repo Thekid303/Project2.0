@@ -10,7 +10,7 @@ const withAuth = require("../utils/auth");
 // GET -> -> http://localhost:3001/dashboard <- <- GET //
 router.get("/", async (req, res) => {
   //get request to localhost:3001/
-  res.render("mainDashboard"); //will respond with the rendered home handlebars template
+  res.render("mainDashboard", { loggedInUser: req.session.loggedIn }); //will respond with the rendered home handlebars template
 });
 
 //////////////////////////////

@@ -34,6 +34,7 @@ router.post('/signup', async (req, res) => {
 })
 
 router.post('/logout', (req, res) => {
+    req.session.destroy();
     res.status(200).json('hello')
 })
 
@@ -44,20 +45,20 @@ router.post('/logout', (req, res) => {
 //                   //
 ///////////////////////
 
-// GET -> -> http://localhost:3001/dashboard <- <- GET //
+// GET -> -> http://localhost:3001/api/users <- <- GET //
 // async before a function means one thing --- always returns a promise.
 router.get("/", async (req, res) => {
     //Rest Arc Patter
     try {
       // search the database and findAll Project(s)
       const postData = await User.findAll({
-        // where: {
-        //   user_id: 1,
-        // },
+        where: {
+          id: 1,
+        },
       });
       console.log(postData)
       // We use .get({ plain: true }) on the object (postData) to serialize to get all project(s)
-      const employee = postData.map(user => employee.get({ plain: true }));
+      const employee = postData.map(user => user.get({ plain: true }));
       console.log(employee);
       // Then, the 'all-project' template is rendered and projects information is passed into the dashboard template.
       res.render("all-employee", {
