@@ -12,11 +12,8 @@ const employeeHandler = async function (event) {
         headers: { "Content-Type": "application/json" },
       });
   
-      // const data = await response.json();
-      // console.log(data);
-  
       if (response.ok) {
-        document.location.replace('/api/user'); //if (200) 
+        document.location.replace('/api/user'); 
       } else {
         alert("Failed to login");
       }

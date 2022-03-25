@@ -2,13 +2,6 @@ const router = require("express").Router();
 const { User } = require('../../models')
 
 router.post('/login', async (req, res) => {
-    // User.find where email = req.body.email
-    // if password = user.password
-    // res.status(200)
-    // req.session.user = user.id -- store the session id
-    // res.status(200).json('hello')
-  // console.log(req.body)
-
     try {
       const user = await User.findOne({
         where: {
@@ -43,7 +36,6 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/signup', async (req, res) => {
-    // console.log("starting")
 
     try {
         const newUser = await User.create({
@@ -91,6 +83,7 @@ router.get("/", async (req, res) => {
       console.log(employee);
       // Then, the 'all-project' template is rendered and projects information is passed into the dashboard template.
       res.render("all-employee", {
+        loggedInUser: req.session.loggedIn,
         // Then, the 'all-project' handlebar template is rendered
         layout: "dashboard", // and projects information is passed into the
         employee, // dashboard handlebar template.

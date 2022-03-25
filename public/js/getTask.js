@@ -3,7 +3,7 @@ const tasksHandler = async function (event) {
     event.preventDefault();
   
     try {  
-      const response = await fetch("/dashboard/tasks", {
+      const response = await fetch("/api/tasks", {
         method: "POST",
         body: JSON.stringify({
           username: usernameEl.value,
@@ -12,11 +12,8 @@ const tasksHandler = async function (event) {
         headers: { "Content-Type": "application/json" },
       });
   
-      // const data = await response.json();
-      // console.log(data);
-  
       if (response.ok) {
-        document.location.replace('/dashboard/tasks'); //if (200) 
+        document.location.replace('/api/tasks'); //if (200) 
       } else {
         alert("Failed to login");
       }

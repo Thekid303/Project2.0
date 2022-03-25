@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Project, User, Comment } = require("../models/index");
+const { Project, User, Task } = require("../models/index");
 const withAuth = require("../utils/auth");
 
 ////////////////////////
