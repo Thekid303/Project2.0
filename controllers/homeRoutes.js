@@ -27,7 +27,7 @@ router.get('/login', (req, res) => {
 
 //////////////////////////
 //                      //
-//    GET SIGNUP PAGE    //
+//    GET SIGNUP PAGE   //
 //                      //
 //////////////////////////
 // GET -> -> http://localhost:3001/signup <- <- GET //
