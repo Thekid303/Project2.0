@@ -12,11 +12,8 @@ const projectsHandler = async function (event) {
         headers: { "Content-Type": "application/json" },
       });
   
-      // const data = await response.json();
-      // console.log(data);
-  
       if (response.ok) {
-        document.location.replace('/api/projects'); //if (200) 
+        document.location.replace('/api/projects'); 
       } else {
         alert("Failed to login");
       }

@@ -1,6 +1,6 @@
-const { Comment } = require('../models');
+const { Task } = require('../models');
 
-const commentData = [
+const taskData = [
   {
     description: 'Added Handlebars templates',
     user_id: 1,
@@ -23,6 +23,6 @@ const commentData = [
   },
 ];
 
-const seedComments = () => Comment.bulkCreate(commentData);
+const seedTasks = () => Task.bulkCreate(taskData);
 
-module.exports = seedComments;
+module.exports = seedTasks;
