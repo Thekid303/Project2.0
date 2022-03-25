@@ -8,6 +8,7 @@ router.post('/login', (req, res) => {
     res.status(200).json('hello')
 });
 
+<<<<<<< HEAD
 
 
 /////////////////////////////
@@ -57,5 +58,17 @@ router.post("/", async (req, res) => {
 
 
 module.exports = router;
+=======
+router.post('/signup', (req, res) => {
+    res.status(200).json('hello')
+})
+>>>>>>> b798f9d927d33f2423d5009e4dbd0f458103d12b
 
+router.post('/logout', (req, res) => {
+    res.status(200).json('hello')
+})
 
+<<<<<<< HEAD
+=======
+module.exports = router;
+>>>>>>> b798f9d927d33f2423d5009e4dbd0f458103d12b
