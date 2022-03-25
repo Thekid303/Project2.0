@@ -15,6 +15,14 @@ Task.init(
     description: {
       type: DataTypes.STRING,
     },
+    project_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'project',
+        key: 'id',
+      },
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -27,6 +35,7 @@ Task.init(
         allowNull: false,
          },
         },
+
   {
     sequelize,
     timestamps: false,
@@ -34,6 +43,7 @@ Task.init(
     underscored: true,
     modelName: 'task',
   }
+
 );
 
 module.exports = Task;
