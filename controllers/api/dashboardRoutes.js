@@ -3,6 +3,15 @@ const { Project, User, Comment } = require("../../models/index");
 const withAuth = require('../../utils/auth');
 
 
+////////////////////////
+//                    //
+//    GET HOMEPAGE    //
+//                    //
+////////////////////////
+router.get("/", async (req, res) => {   //get request to localhost:3001/
+  res.render("dashboard")               //will respond with the rendered home handlebars template
+});
+
 ////////////////////////////
 //                        //
 //    GET ALL PROJECTS    //
