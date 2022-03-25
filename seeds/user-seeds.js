@@ -4,22 +4,22 @@ const userData = [
   {
     name: 'Marissa Fandel',
     email: 'mfandel118@gmail.com',
-    password: 'password1'
+    password: '$2b$10$Rfii86QnJP/z87571gvBPeOCWyXCfqziVxDMx5aXKO3tbkvM5kX7C'
   },
   {
     name: 'Joseph Dugan',
     email: 'joseph.michael.dugan@gmail.com',
-    password: 'password2'
+    password: '$2b$10$Rfii86QnJP/z87571gvBPeOCWyXCfqziVxDMx5aXKO3tbkvM5kX7C'
   },
   {
     name: 'Amit Singhal',
     email: 'singhal8@gmail.com',
-    password: 'password3'
+    password: '$2b$10$Rfii86QnJP/z87571gvBPeOCWyXCfqziVxDMx5aXKO3tbkvM5kX7C'
   },
   {
     name: 'Nick Graves',
     email: 'nicholasgraves4@icloud.com',
-    password: 'password4'
+    password: '$2b$10$Rfii86QnJP/z87571gvBPeOCWyXCfqziVxDMx5aXKO3tbkvM5kX7C'
   },
 ];
 
