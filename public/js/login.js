@@ -36,6 +36,3 @@ const signinBtn = document.querySelector("#signinBtn");
 if (signinBtn) {
   signinBtn.addEventListener("click", loginFormHandler);
 };
-
-
-
