@@ -14,10 +14,44 @@
   <title>DASHBOARD</title>
 </head>
 
+
 <body>
   {{>header}}
 
-  {{>navbar}}
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                {{#unless loggedInUser}}
+                <li class="nav-item">
+                    <a id="loginBtn" class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a id="loginBtn" class="nav-link" href="/signup">Signup</a>
+                </li>
+                {{else}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/createProject">Create Project</a>
+                </li>
+                <li class="nav-item">
+                    <a id="logoutBtn" class="nav-link" href="#">Logout</a>
+                </li>
+                {{/unless}}
+
+            </ul>
+        </div>
+    </div>
+</nav>
   <main>
     {{{body}}}
   </main>

@@ -8,7 +8,7 @@ const { Project, User, Comment } = require("../models/index");
 ////////////////////////
 // GET -> -> http://localhost:3001/ <- <- GET //
 router.get("/", async (req, res) => {   //get request to localhost:3001/
-  res.render("home")                    //will respond with the rendered home handlebars template
+  res.render("home", { loggedInUser: req.session.loggedIn })                    //will respond with the rendered home handlebars template
 });
 
 //////////////////////////
@@ -18,8 +18,9 @@ router.get("/", async (req, res) => {   //get request to localhost:3001/
 //////////////////////////
 // GET -> -> http://localhost:3001/login <- <- GET //
 router.get('/login', (req, res) => {
+  console.log(req.session.loggedIn)
     if (req.session.loggedIn) {
-        res.redirect('./');
+        res.redirect('./dashboard');
         return;
     }
     res.render('login');
@@ -33,7 +34,7 @@ router.get('/login', (req, res) => {
 // GET -> -> http://localhost:3001/signup <- <- GET //
 router.get('/signup', (req, res) => {
   if (req.session.loggedIn) {
-      res.redirect('./');
+      res.redirect('./dashboard');
       return;
   }
   res.render('signup');

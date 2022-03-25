@@ -25,4 +25,5 @@ const logoutHandler = async function (event) {
   
   if (logoutBtn) {
     logoutBtn.addEventListener("click", logoutHandler);
+    location.reload();
   };
