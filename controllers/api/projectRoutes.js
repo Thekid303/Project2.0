@@ -43,17 +43,18 @@ router.get("/", async (req, res) => {
   //Rest Arc Patter
   try {
     // search the database and findAll Project(s)
-    const postData = await Project.findAll({
-      where: {
-        user_id: 1,
-      },
-    });
+    const postData = await Project.findAll() //{
+      // where: {
+      //   user_id: 2,
+      // },
+    // });
     console.log(postData)
     // We use .get({ plain: true }) on the object (postData) to serialize to get all project(s)
     const projects = postData.map(project => project.get({ plain: true }));
     console.log(projects);
     // Then, the 'all-project' template is rendered and projects information is passed into the dashboard template.
-    res.render("all-project", {
+    res.render("all-project", { 
+      loggedInUser: req.session.loggedIn,
       // Then, the 'all-project' handlebar template is rendered
       layout: "dashboard", // and projects information is passed into the
       projects, // dashboard handlebar template.
