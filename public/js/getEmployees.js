@@ -1,9 +1,9 @@
-const projectsHandler = async function (event) {
+const employeeHandler = async function (event) {
     console.log("testing")
     event.preventDefault();
   
     try {  
-      const response = await fetch("/dashboard/user", {
+      const response = await fetch("/api/user", {
         method: "POST",
         body: JSON.stringify({
           username: usernameEl.value,
@@ -16,7 +16,7 @@ const projectsHandler = async function (event) {
       // console.log(data);
   
       if (response.ok) {
-        document.location.replace('/dashboard/user'); //if (200) 
+        document.location.replace('/api/user'); //if (200) 
       } else {
         alert("Failed to login");
       }
@@ -26,8 +26,8 @@ const projectsHandler = async function (event) {
     }
   };
 
-  const projectsBtn = document.querySelector("#projectsBtn");
+  const employeeBtn = document.querySelector("#employeeBtn");
 
-if (projectsBtn) {
-    projectsBtn.addEventListener("click", projectsHandler);
+if (employeeBtn) {
+  employeeBtn.addEventListener("click", employeeHandler);
 };
