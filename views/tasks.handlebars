@@ -1,25 +1,26 @@
 <div class="container justify-content-center">
-  <h1 class="text-center mt-3"><u>Employees</u></h1>
-  {{#if user}}
+  <h1 class="text-center mt-3"><u>Tasks</u></h1>
+  {{#if projects}}
   <br />
   <br />
-  <h2 class="text-center">Would you like to add a new employee?
-    <a href="/createUser">Click here to start</a>
+  <h2 class="text-center">You currently have no tasks
+    <a href="/projects">Click here to start</a>
   </h2>
   {{else}}
   <div class="table-responsive">
     <table class="table table-striped mt-4">
       <thead>
         <tr>
-          <th colspan="4" scope="col"><a class="btn btn-primary" href="/user">Add New Employee</a>
+          <th colspan="4" scope="col"><a class="btn btn-primary" href="/tasks">Create New Task</a>
             <br />
             <br />
           </th>
 
         </tr>
         <tr>
-          <th scope="col">Employee Name</th>
-          <th scope="col">Employee Email</th>
+          <th scope="col">Project Name</th>
+          <th scope="col">Short Description</th>
+          <th scope="col">Created At</th>
         </tr>
 
       </thead>

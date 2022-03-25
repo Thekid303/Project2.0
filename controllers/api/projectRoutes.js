@@ -1,13 +1,30 @@
 const router = require("express").Router();
 
+
+////////////////////////////
+//                        //
+//    GET ALL PROJECTS    //
+//                        //
+////////////////////////////
+// POST -> -> http://localhost:3001/dashboard/new-project <- <- POST //
+router.post("/projects", (req, res) => {
+  res.render("projects", {
+    // Then, the 'projects' handlebar template is rendered on the
+    layout: "dashboard", // dashboard template
+    project,
+  });
+});
+
+
+
 /////////////////////////////
 //                         //
 //    ADD A NEW PROJECT    //
 //                         //
 /////////////////////////////
 // POST -> -> http://localhost:3001/dashboard/new-project <- <- POST //
-router.post("/new-project", (req, res) => {
-  res.render("new-project", {
+router.post("/createProject", (req, res) => {
+  res.render("createProject", {
     // Then, the 'new-project' handlebar template is rendered on the
     layout: "dashboard", // dashboard template
   });
@@ -18,9 +35,9 @@ router.post("/new-project", (req, res) => {
 // //    GET ALL PROJECTS    //
 // //                        //
 // ////////////////////////////
-// //
-// // GET -> -> http://localhost:3001/dashboard <- <- GET //
-// // async before a function means one thing --- always returns a promise.
+//
+// GET -> -> http://localhost:3001/dashboard <- <- GET //
+// async before a function means one thing --- always returns a promise.
 // router.get("/", withAuth, async (req, res) => {
 //   //Rest Arc Patter
 //   try {
