@@ -34,6 +34,16 @@ router.get('/projects', (req, res) => {
     res.render('projects');
 });
 
+//////////////////////////
+//                      //
+//    GET TASKS PAGE    //
+//                      //
+//////////////////////////
+// GET -> -> http://localhost:3001/dashboard/tasks <- <- GET //
+router.get('/tasks', (req, res) => {
+    res.render('tasks');
+});
+
 
 
 module.exports = router;
