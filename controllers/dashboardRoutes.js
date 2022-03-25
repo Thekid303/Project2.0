@@ -18,9 +18,9 @@ router.get("/", async (req, res) => {
 //    GET EMPLOYEES PAGE    //
 //                          //
 //////////////////////////////
-// GET -> -> http://localhost:3001/dashboard/user <- <- GET //
+// GET -> -> http://localhost:3001/api/user <- <- GET //
 router.get('/user', (req, res) => {
-    res.render('employee');
+    res.render('employee', { loggedInUser: req.session.loggedIn });
 });
 
 
@@ -29,9 +29,9 @@ router.get('/user', (req, res) => {
 //    GET PROJECTS PAGE    //
 //                         //
 /////////////////////////////
-// GET -> -> http://localhost:3001/dashboard/projects <- <- GET //
+// GET -> -> http://localhost:3001/api/projects <- <- GET //
 router.get('/projects', (req, res) => {
-    res.render('projects');
+    res.render('projects',  { loggedInUser: req.session.loggedIn });
 });
 
 //////////////////////////
@@ -39,7 +39,7 @@ router.get('/projects', (req, res) => {
 //    GET TASKS PAGE    //
 //                      //
 //////////////////////////
-// GET -> -> http://localhost:3001/dashboard/tasks <- <- GET //
+// GET -> -> http://localhost:3001/api/tasks <- <- GET //
 router.get('/tasks', (req, res) => {
     res.render('tasks');
 });
