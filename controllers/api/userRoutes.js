@@ -8,7 +8,12 @@ router.post('/login', (req, res) => {
     res.status(200).json('hello')
 });
 
+router.post('/signup', (req, res) => {
+    res.status(200).json('hello')
+})
+
+router.post('/logout', (req, res) => {
+    res.status(200).json('hello')
+})
+
 module.exports = router;
-
-
-// logoutRoute

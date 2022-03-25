@@ -1,30 +1,28 @@
-// const logout = async () => {
-
-//     // Logs out user 
-//     const response = await fetch('/api/users/logout', {
-//       method: 'POST',
-//       headers: { 'Content-Type': 'application/json' },
-//     });
+const logoutHandler = async function (event) {
+    event.preventDefault();
   
-//     if (response.ok) {
-//       document.location.replace('/');
-//     } else {
-//       alert(response.statusText);
-//     }
-//   };
-  
-//   document.querySelector('#logout').addEventListener('click', logout);
-  
-const logoutBtn = document.querySelector("#logoutBtn");
-
-function logoutUser() {
-    fetch("/users/logout", {
+    try {
+      const response = await fetch("/api/user/logout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-    });
-    location.href = "/";
-}
-
-if (logoutBtn) {
-    logoutBtn.addEventListener("click", logoutUser);
-}
+      });
+  
+      // const data = await response.json();
+      // console.log(data);
+  
+      if (response.ok) {
+        document.location.replace('/'); //if (200) 
+      } else {
+        alert("Failed to logout");
+      }
+  
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  
+  const logoutBtn = document.querySelector("#logoutBtn");
+  
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", logoutHandler);
+  };
