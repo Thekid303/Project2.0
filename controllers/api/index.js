@@ -1,16 +1,11 @@
 const router = require('express').Router();
-const userRoutes = require('./userRoutes')
-const projectRoutes = require('./projectRoutes')
-const taskRoutes = require('./taskRoutes')
 
-//////////////////////
-//                  //
-//    MIDDLEWARE    //
-//                  //
-//////////////////////
+const userRoutes = require('./user-routes.js');
+const postRoutes = require('./post-routes');
+const projectRoutes = require('./project-routes');
+
 router.use('/user', userRoutes);
-router.use('/projects', projectRoutes);
-router.use('/tasks', taskRoutes);
-
+router.use('/post', postRoutes);
+router.use('/project', projectRoutes);
 
 module.exports = router;

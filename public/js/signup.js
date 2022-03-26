@@ -1,38 +1,25 @@
-const signUpFormHandler = async function (event) {
-    event.preventDefault();
+const signupFormHandler = async function(event) {
+  event.preventDefault();
 
-    try {
-      const firstNameEl = document.querySelector("#firstNameField");
-      const lastNameEl = document.querySelector("#lastNameField");
-      const emailEl = document.querySelector("#emailField");
-      const passwordEl = document.querySelector("#passwordField");
-  
-      const response = await fetch("/api/user/signup", {
-        method: "POST",
-        body: JSON.stringify({
-          name: `${firstNameEl.value} ${lastNameEl.value}`,
-          email: emailEl.value,
-          password: passwordEl.value,
-        }),
-        headers: { "Content-Type": "application/json" },
-      });
+  const usernameEl = document.querySelector('#username-input-signup');
+  const passwordEl = document.querySelector('#password-input-signup');
 
-    //   const data = await response.json();
-    //   console.log(data);
+  const response = await fetch('/api/user', {
+    method: 'POST',
+    body: JSON.stringify({
+      username: usernameEl.value,
+      password: passwordEl.value,
+    }),
+    headers: { 'Content-Type': 'application/json' },
+  });
 
-      if (response.ok) {
-        document.location.replace('/dashboard'); 
-      } else {
-        alert("Failed to signup");
-      }
+  if (response.ok) {
+    document.location.replace('/dashboard');
+  } else {
+    alert('Failed to sign up');
+  }
+};
 
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  const signUpBtn = document.querySelector("#signUpBtn");
-  
-  if (signUpBtn) {
-    signUpBtn.addEventListener("click", signUpFormHandler);
-  };
+document
+  .querySelector('#signup-form')
+  .addEventListener('submit', signupFormHandler);

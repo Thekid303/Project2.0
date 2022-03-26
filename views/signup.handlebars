@@ -1,27 +1,87 @@
 <div class="container">
   <h1 class="h3 mb-3 fw-normal">Please sign up!</h1>
   <h1 class="h3 mb-3 fw-normal">Already have an acount?
-    <a href="/login">Login in here</a>
-  </h1>
+    <a href="/login">Login in here</a></h1>
+  <br />
+  <div id="signUpError" class="error bg-danger text-white"></div>
+  <div id="signup" role="tabpanel">
+    <form id="signup-form" class="card-body">
+      <div>
+        <label for="username-input-signup">Username</label>
+        <input type="text" id="username-input-signup" />
+      </div>
+      <div>
+        <label for="password-input-signup">Password</label>
+        <input type="password" id="password-input-signup" />
+      </div>
+      <button
+      class="w-100 btn btn-lg btn-primary"
+      type="submit"
+      id="signup-btn"
+    >Sign up</button>
+      
+    </form>
+  </div>
+</div>
+
+<script src="/js/signup.js"></script>
+
+
+
+
+
+{{!-- <div class="container">
+  <h1 class="h3 mb-3 fw-normal">Please sign up!</h1>
+  <h1 class="h3 mb-3 fw-normal">Already have an acount?
+    <a href="/login">Login in here</a></h1>
   <br />
   <div id="signUpError" class="error bg-danger text-white"></div>
   <form>
     <div class="form-floating">
-      <input type="text" class="form-control" id="firstNameField" placeholder="First Name" autocomplete="on" />
+      <input
+        type="text"
+        class="form-control"
+        id="firstNameField"
+        placeholder="First Name"
+        autocomplete="on"
+      />
       <label for="firstNameField">First Name</label>
     </div>
     <div class="form-floating">
-      <input type="text" class="form-control" id="lastNameField" placeholder="Last Name" autocomplete="on" />
+      <input
+        type="text"
+        class="form-control"
+        id="lastNameField"
+        placeholder="Last Name"
+        autocomplete="on"
+      />
       <label for="lastNameField">Last Name</label>
     </div>
     <div class="form-floating">
-      <input type="email" class="form-control" id="emailField" placeholder="Email address" autocomplete="on" />
+      <input
+        type="email"
+        class="form-control"
+        id="emailField"
+        placeholder="Email address"
+        autocomplete="on"
+      />
       <label for="emailField">Email address</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="passwordField" placeholder="Password" autocomplete="on" />
+      <input
+        type="password"
+        class="form-control"
+        id="passwordField"
+        placeholder="Password"
+        autocomplete="on"
+      />
       <label for="passwordField">Password</label>
     </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit" id="signUpBtn">Sign up</button>
+    <button
+      class="w-100 btn btn-lg btn-primary"
+      type="submit"
+      id="signUpBtn"
+    >Sign up</button>
   </form>
 </div>
+<script src="/js/signup.js"></script> --}}

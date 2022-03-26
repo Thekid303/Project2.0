@@ -1,18 +1,16 @@
 const { Sequelize, Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/config');
 
-class Project extends Model {}
+class Post extends Model {}
 
-Project.init(
+Post.init(
   {
-    body: {
-      type: DataTypes.STRING,
-      allowNull: false
-    }
+    title: DataTypes.STRING,
+    body: DataTypes.STRING
   },
   {
     sequelize
   }
 );
 
-module.exports = Project;
+module.exports = Post;
