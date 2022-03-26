@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Task, Project } = require("../../models");
+const { Task, Project, User } = require("../../models");
 
 ////////////////////////
 //                    //
@@ -18,6 +18,10 @@ router.get("/", async (req, res) => {
         {
           model: Project,
           attributes: ['id', 'name'],
+        },
+        {
+          model: User,
+          attributes: ['name'],
         },
       ],
       });
@@ -39,12 +43,6 @@ router.get("/", async (req, res) => {
 });
 
 
-// router.get('/', async (req, res) => {
-//   res.render('all', {Task});
-// });
 
-// router.get('/tasks/:num', async (req, res) => {
-//   return res.render('task', Task[req.params.num - 1]);
-// });
 
 module.exports = router;
