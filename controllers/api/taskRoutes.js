@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Task } = require("../../models");
+const { Task, Project } = require("../../models");
 
 ////////////////////////
 //                    //
@@ -13,7 +13,14 @@ router.get("/", async (req, res) => {
     //Rest Arc Patter
     try {
       // search the database and findAll Project(s)
-      const postData = await Task.findAll();
+      const postData = await Task.findAll({
+      include: [
+        {
+          model: Project,
+          attributes: ['id', 'name'],
+        },
+      ],
+      });
       console.log(postData)
       // We use .get({ plain: true }) on the object (postData) to serialize to get all project(s)
       const tasks = postData.map(task => task.get({ plain: true }));
@@ -23,11 +30,21 @@ router.get("/", async (req, res) => {
         loggedInUser: req.session.loggedIn,
         // Then, the 'all-project' handlebar template is rendered
         layout: "dashboard",    // and projects information is passed into the
-        tasks,                  // dashboard handlebar template.
+        tasks,
+                           // dashboard handlebar template.
       });
     } catch (err) {
       console.log(err)
     }
 });
+
+
+// router.get('/', async (req, res) => {
+//   res.render('all', {Task});
+// });
+
+// router.get('/tasks/:num', async (req, res) => {
+//   return res.render('task', Task[req.params.num - 1]);
+// });
 
 module.exports = router;

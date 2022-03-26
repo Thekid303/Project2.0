@@ -30,6 +30,7 @@ Task.init(
         key: 'id',
       },
     },
+    
     hours: {
         type: DataTypes.INTEGER,
         allowNull: false,
@@ -45,5 +46,7 @@ Task.init(
   }
 
 );
+
+
 
 module.exports = Task;
