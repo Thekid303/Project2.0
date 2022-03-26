@@ -35,14 +35,11 @@ router.get("/", async (req, res) => {
         // Then, the 'all-project' handlebar template is rendered
         layout: "dashboard",    // and projects information is passed into the
         tasks,
-                           // dashboard handlebar template.
+        // dashboard handlebar template.
       });
     } catch (err) {
       console.log(err)
     }
 });
-
-
-
 
 module.exports = router;
