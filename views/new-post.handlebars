@@ -12,11 +12,14 @@
     <textarea id="editor" name="post-body" class="form-control"></textarea>
 
 
-    <label class="form-label" for="post-boss">Boss</label>
+    <label class="form-label" for="post-boss">Employer</label>
     <input type="text" name="post-boss" class="form-input" />
 
     <label class="form-label" for="post-rate">Rate Of Pay</label>
     <input type="text" name="post-rate" class="form-input" />
+
+    <label class="form-label" for="post-date">Due Date</label>
+    <input type="text" name="post-date" value="{{post.date}}" class="form-input" />
 
 
     {{!-- <label class="form-label" for="post-employer">Employer</label>
