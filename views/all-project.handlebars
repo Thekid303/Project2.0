@@ -2,7 +2,7 @@
   <div class="row d-flex justify-content-center">
     {{#each projects}}
 
-      <article class="card col-9 col-md-5 col-lg-4 p-3 m-4"><a
+      <article class="card col-9 col-md-5 p-3 m-4"><a
           class="proj-header"
           href="/api/projects/{{id}}">
           <div class="card-header d-flex justify-content-center bg-warning">
@@ -10,14 +10,14 @@
               {{name}}
             </h2>
           </div>
-          <div class="card-body">
+          <div class="card-body my-3">
             {{description}}
           </div>
         </a>
         <div class="col">
         
-          <a id="delete{{name}}" class="nav-link" href="/api/projects"><button class="w-100 btn btn-sm btn-danger" id="delete{{name}}">DELETE</button></a>
-         <a id="edit{{name}}" class="nav-link" href="/api/projects/edit"><button class="w-100 btn btn-sm btn-warning" id="edit{{name}}">EDIT</button></a>
+        <a id="edit{{name}}" class="nav-link" href="/api/projects/edit"><button class="w-100 btn btn-sm btn-info" id="edit{{name}}">EDIT</button></a>
+        <a id="delete{{name}}" class="nav-link" href="/api/projects"><button class="w-100 btn btn-sm btn-danger" id="delete{{name}}">DELETE</button></a>
        
         </div>
       </article>
