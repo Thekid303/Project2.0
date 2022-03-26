@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Project } = require("../../models");
+const { Project, Task } = require("../../models");
 // const { withAuth } = require('../../utils');
 
 /////////////////////////////
@@ -56,18 +56,29 @@ router.get('/:id', async (req, res) => {
     const postData = await Project.findOne({
       where: {
         id: req.params.id
-      }
+      },
+      // include: [
+      //   {
+      //     model: Task,
+      //     attributes: [
+      //       'description',
+      //       'project_id',
+      //       'user_id',
+      //       'hours'
+      //     ]
+      //   }
+      // ]
     })
     // console.log(postData)
 
     if (postData) {
-      const projects = postData.get({ plain: true });
-      // console.log(projects)
+      const project = postData.get({ plain: true });
+      // console.log(project)
 
       res.render('single-project', {
+        project,
         loggedInUser: req.session.loggedIn,
-        layout: 'dashboard',
-        projects,
+        layout: 'dashboard'
       })
     } else {
       res.status(404).end()

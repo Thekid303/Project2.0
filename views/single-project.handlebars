@@ -1,4 +1,8 @@
-<div>
-  <h1>{{name}}</h1>
-  <h3>{{description}}</h3>
+{{#if loggedInUser}}
+<div class="container">
+  <div class="flex-column d-flex align-items-center">
+    <h1 class="display-3">{{project.name}}</h1>
+    <h3>{{project.description}}</h3>
+  </div>
 </div>
+{{/if}}
