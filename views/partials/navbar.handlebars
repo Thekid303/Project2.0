@@ -5,31 +5,25 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <ul class="navbar-nav">
-                {{#unless loggedInUser}}
-                <li class="li-inline nav-item"><a href="/">HOME</a></li>
-                <li class="li-inline nav-item"><a href="/dashboard">DASHBOARD</a></li>
-                <li class="li-inline nav-item"><a href="/login">LOGIN</a></li>
-                <li class="li-inline nav-item"><a href="/signup">Sign Up</a></li>
 
+            
+       
+               {{#unless loggedInUser}} 
+                  {{!-- <nav class="navbar" --}}
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        {{!-- <button type="button" class="btn btn-primary m-2"><a href="/" class="text-white text-decoration-none">HOME</button></a> --}}
+                        <button type="button" class="btn btn-primary m-2"><a href="/dashboard" class="text-white text-decoration-none">DASHBOARD</button></a> 
+                        <button id="logout-link" type="button" class="btn btn-danger m-2"><a href="/logout" class="text-white text-decoration-none">LOGOUT</button></a>
+                        {{#else}}
+                            <button type="button" class="btn btn-primary m-2"><a href="/" class="text-white text-decoration-none">HOME</button></a>
+                            <button type="button" class="btn btn-primary m-2"><a href="/dashboard" class="text-white text-decoration-none">DASHBOARD</button></a>
+                            <button type="button" class="btn btn-success m-2"><a href="/login" class="text-white text-decoration-none">LOGIN</button></a>
+                            <button type="button" class="btn btn-success m-2"><a href="/signup" class="text-white text-decoration-none">SIGNUP</button></a>
+                        {{/else}}
+                    </div>
+                </nav>
 
-
-                {{!-- <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li> --}}
-                {{!-- {{else}}
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/dashboard">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/api/projects">Projects</a>
-                </li>
-                {{!-- <li class="nav-item">
-                    <a class="nav-link" href="/createProject">Create Project</a>
-                </li> --}}
-                <li class="nav-item">
-                    <a id="logoutBtn" class="nav-link" href="#">Logout</a>
-                </li> --}}
                 {{/unless}}
-
             </ul>
         </div>
     </div>
