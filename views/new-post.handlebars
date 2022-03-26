@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h1>Create New Project</h1>
+
+  <div class="card-header">
+
+  </div>
+  <form id="new-post-form" class="bg-danger text-white">
+    <label class="form-label" for="post-title">Project Title</label>
+    <input type="text" name="post-title" class="form-input" />
+
+    <label class="form-label" for="post-body">Project Description </label>
+    <textarea id="editor" name="post-body" class="form-control"></textarea>
+
+    <button type="submit" class="btn">Create Project</button>
+  </form>
+</div>
+
+<script src="/js/new.js"></script>
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script>
+  var quill = new Quill('#editor', { theme: 'snow' });
+
+
+ 
