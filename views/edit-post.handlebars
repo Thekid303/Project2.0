@@ -11,17 +11,14 @@
     <label class="form-label" for="post-body">Content</label>
     <textarea name="post-body" class="form-input">{{post.body}}</textarea>
 
-    <label class="form-label" for="post-boss">Boss</label>
+    <label class="form-label" for="post-boss">Employer</label>
     <input type="text" name="post-boss" value="{{post.boss}}" class="form-input" />
 
     <label class="form-label" for="post-rate">Rate Of Pay</label>
     <input type="text" name="post-rate" value="{{post.rate}}" class="form-input" />
 
-    {{!-- <label class="form-label" for="post-employer">Employer</label>
-    <input type="text" name="post-employer" value="{{post.employer}}" class="form-input" />
-
-    <label class="form-label" for="post-rate">Rate Of Pay</label>
-    <textarea name="post-rate" class="form-input">{{post.rate}}</textarea> --}}
+    <label class="form-label" for="post-date">Due Date</label>
+    <input type="text" name="post-date" value="{{post.date}}" class="form-input" />
 
     <button type="submit" class="btn">Update</button>
 
