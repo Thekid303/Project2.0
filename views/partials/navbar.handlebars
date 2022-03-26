@@ -13,12 +13,11 @@
                  
             
        
-               {{#unless loggedInUser}} 
-                  {{!-- <nav class="navbar" --}}
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                        {{!-- <button type="button" class="btn btn-primary m-2"><a href="/" class="text-white text-decoration-none">HOME</button></a> --}}
-                        <button type="button" class="btn btn-primary m-2"><a href="/dashboard" class="text-white text-decoration-none">DASHBOARD</button></a> 
-                        <button id="logout-link" type="button" class="btn btn-danger m-2"><a href="/logout" class="text-white text-decoration-none">LOGOUT</button></a>
+               {{#if loggedIn}} 
+                  <nav class="navbar">
+                    <div class="btn-group " role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-primary m-2"><a href="/dashboard" class="loggedIn text-white text-decoration-none">DASHBOARD</button></a> 
+                        <button id="logout-link" type="button" class="btn btn-danger m-2"><a href="/logout" class="loggedIn text-white text-decoration-none">LOGOUT</button></a>
                         {{#else}}
                             <button type="button" class="btn btn-primary m-2"><a href="/" class="text-white text-decoration-none">HOME</button></a>
                             <button type="button" class="btn btn-primary m-2"><a href="/dashboard" class="text-white text-decoration-none">DASHBOARD</button></a>
@@ -28,11 +27,14 @@
                     </div>
                 </nav>
 
-                {{/unless}}
+                {{/if}}
             </ul>
         </div>
     </div>
 </nav>
+<script>
+
+</script>
 
 
 
