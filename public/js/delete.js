@@ -1,7 +1,13 @@
 
 
-const deleteBtn = document.querySelector("#deleteBtn");
+const deleteClickHandler = async function() {
+  await fetch(`/api/projects/${project.Id}`, {
+    method: 'DELETE'
+  });
 
-if (signinBtn) {
-  deleteBtn.addEventListener("click", deleteHandler);
+  document.location.replace('/dashboard');
 };
+
+document
+  .querySelector('#deleteBtn')
+  .addEventListener('click', deleteClickHandler);
