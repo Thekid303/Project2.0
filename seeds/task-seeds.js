@@ -17,13 +17,13 @@ const taskData = [
     description: 'Created public directory & files',
     project_id: 1,
     user_id: 3,
-    hours: 6
+    hours: 3
   },
   {
     description: 'Created server',
     project_id: 2,
     user_id: 4,
-    hours: 3
+    hours: 6
   },
 ];
 
