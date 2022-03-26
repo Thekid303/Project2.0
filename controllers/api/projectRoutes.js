@@ -88,4 +88,39 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+
+////////////////////////////////
+//                            //
+//    EDIT PROJECT DETAILS    //
+//                            //
+////////////////////////////////
+//GET -> -> http://localhost:3001/projects/edit <- <- GET //
+
+router.get('/edit', (req, res) => {
+  res.render('edit-project');
+});
+// router.post('/edit', async (req, res) => {
+//   try {
+//     const [affectedRows] = await Post.update(req.body, {
+//       where: {
+//         id: req.params.id,
+//       },
+//     });
+
+//     if (affectedRows > 0) {
+//       res.status(200).end();
+//     } else {
+//       res.status(404).end();
+//     }
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
+
+
+
+
+
+
 module.exports = router;
