@@ -26,6 +26,7 @@ footer a:hover {
   color: gold;
 }
 
-#formC {
-  min-height: 200vh;
+#imgBkg {
+    background-image: url("../images/home.png");
+    background-color: #cccccc;
 }
