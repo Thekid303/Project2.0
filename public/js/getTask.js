@@ -1,3 +1,5 @@
+const { Project } = require("../../models")
+
 const tasksHandler = async function (event) {
     console.log("testing")
     event.preventDefault();
@@ -18,10 +20,12 @@ const tasksHandler = async function (event) {
         alert("Failed to login");
       }
   
-    } catch (err) {
-      console.log(err);
-    }
-  };
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+
 
   const tasksBtn = document.querySelector("#tasksBtn");
 

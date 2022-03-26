@@ -3,7 +3,12 @@
   <article class="card">
     <div class="card-header d-flex justify-content-center">
       <h2>
-        <a href="/tasks/{{project_id}}">{{project_id}}</a>
+         
+         <div>
+            Posted by {{User.username}} on {{format_date task.createdAt}} <br>
+            Project: {{Project.name}}<a href="/tasks/{{project_id}}">{{project_id}}</a>
+         </div>
+       
       </h2>
     </div>
     <div class="card-body">
