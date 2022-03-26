@@ -1,22 +1,6 @@
 const router = require("express").Router();
-const { Project } = require("../../models")
-
-
-////////////////////////////
-//                        //
-//    GET ALL PROJECTS    //
-//                        //
-////////////////////////////
-// POST -> -> http://localhost:3001/dashboard/new-project <- <- POST //
-router.post("/projects", (req, res) => {
-  res.render("projects", {
-    // Then, the 'projects' handlebar template is rendered on the
-    layout: "dashboard", // dashboard template
-    project,
-  });
-});
-
-
+const { Project } = require("../../models");
+// const { withAuth } = require('../../utils');
 
 /////////////////////////////
 //                         //
@@ -60,5 +44,37 @@ router.get("/", async (req, res) => {
   }
 });
 
+/////////////////////////////
+//                         //
+//    GET PROJECT BY ID    //
+//                         //
+/////////////////////////////
+// GET -> -> http://localhost:3001/project/1 <- <- GET //
+
+router.get('/:id', async (req, res) => {
+  try {
+    const postData = await Project.findOne({
+      where: {
+        id: req.params.id
+      }
+    })
+    // console.log(postData)
+
+    if (postData) {
+      const projects = postData.get({ plain: true });
+      // console.log(projects)
+
+      res.render('single-project', {
+        loggedInUser: req.session.loggedIn,
+        layout: 'dashboard',
+        projects,
+      })
+    } else {
+      res.status(404).end()
+    }
+  } catch (err) {
+    console.log(err)
+  }
+});
 
 module.exports = router;
