@@ -12,33 +12,37 @@
   <link rel="stylesheet" href="/css/style.css">
   {{>header}}
 </head>
-
-<body class="flex-column min-100-vh">
-  <nav class="navbar">
-    <ul class="flex-row">
-      <li class="li-inline nav-item"><a href="/">Home</a></li>
-      <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
-      <li class="li-inline nav-item"><a href="#" id="logout-link">Logout</a></li>
-    </ul>
-  </nav>
+<main>
   <header class="hero">
-    <h1 class="app-title"><a href="/dashboard">Your Dashboard</a></h1>
+    <div class="flex-column min-100-vh">
+     <nav class="navbar sticky-top navbar-dark bg-dark">
+      <form class="form-inline">
+        <button class="btn btn-outline-success" type="button"><a href="/">HOME</button></a>
+        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="/dashboard">DASHBOARD</button></a>
+        <button class="btn btn-sm btn-outline-secondary" type="button"><a href="#" id="logout-link">LOGOUT</button></a>
+      </form>
+    </nav>
   </header>
+  <body>
+    <div class="m-2 row">
+      <div class="d-grid gap-2 d-md-block">
+        <button class="btn btn-primary text-white" type="button"><a href="/dashboard" class="text-white text-decoration-none">YOUR DASHBOARD</button></a>
+        <button class="btn btn-primary text-white" type="button"><a href="/dashboard/new" class="text-white text-decoration-none">ADD A NEW PROJECT</button></a>
+      </div>
+ 
+  </div>
 
-  <main class="col-auto">
-    {{{body}}}
+
+  {{{body}}}
     
-    <a href="/dashboard/new"> Add New Project</a>
-  </main>
-
-  
-
-    {{>footer}}
+ 
+  </body>
+  {{>footer}}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 </body>
-
+</main>
 <script src="/js/logout.js"></script>
 
 </html>
