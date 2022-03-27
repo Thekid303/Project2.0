@@ -1,9 +1,10 @@
 <div class="posts">
-  <div class="row">
+  <div class="row m-2">
+    
   {{#each posts}}
     {{!-- <div class="row"> --}}
-      <div class="m-2 col-sm-4">
-        <div class="card text-center">
+      <div class="col-md-4 my-3 align-content-center">
+        <div class="card text-center opacity-75">
           <div class="card-header">
             <h3>{{title}}</h3>
           </div>
@@ -19,4 +20,5 @@
       </div>
     </div>
   {{/each}}
+  
 </div>

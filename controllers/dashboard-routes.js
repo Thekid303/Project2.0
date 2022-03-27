@@ -46,4 +46,11 @@ router.get('/edit/:id', withAuth, async (req, res) => {
   }
 });
 
+
+router.get('/budget', withAuth, (req, res) => {
+  res.render('budget-details', {
+    layout: 'dashboard',
+  });
+});
+
 module.exports = router;
