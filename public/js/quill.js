@@ -9,3 +9,4 @@ var quill = new Quill('#editor', {
   placeholder: 'Compose an epic project...',
   theme: 'snow'  
 });
+
