@@ -9,10 +9,7 @@ const newFormHandler = async function(event) {
     body: JSON.stringify({
       title,
       body,
-
-      // boss,
-      // rate,
-      // date
+      date
 
     }),
     headers: { 'Content-Type': 'application/json' },
