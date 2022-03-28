@@ -3,16 +3,18 @@
   {{#each posts}}
     {{!-- <div class="row"> --}}
       <div class="col-md-4 align-content-center">
-        <div class="card text-center">
+        <div class="card hidden text-center">
           <div class="card-header">
             <h3>{{title}}</h3>
           </div>
           <div class="card-body">
             <p class="card-text">{{body}}</p>
-            <h5>DUE DATE: {{dueDate}}</h5>
+            <h5>DUE DATE: {{date}}</h5>
             <p>BUDGET: {{budget}}</p>
             <p>STATUS: {{status}}</p>
             <a class="btn-sm btn-warning text-white text-decoration-none" href="/dashboard/edit/{{id}}">EDIT</a>
+            <a class="btn-sm btn-success text-white text-decoration-none" href="/dashboard/budget/{{id}}">BUDGET</a>
+            
           </div>
         <div class="card-footer text-muted">
           Posted by {{User.username}} on {{format_date createdAt}}
