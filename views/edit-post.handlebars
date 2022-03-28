@@ -11,8 +11,13 @@
         <input type="text" name="post-title" class="form-input" value="{{post.title}}">
       </div>
 
-      <div class="form-group">
+      {{!-- <div class="form-group">
         <label class="form-label" for="editor">Project Content</label>
+        <textarea id="editor" name="post-body" class="form-control">{{post.body}}</textarea>
+      </div> --}}
+
+          <div id="editor">
+        <label class="form-label" for="editor">Project Description</label>
         <textarea id="editor" name="post-body" class="form-control">{{post.body}}</textarea>
       </div>
 
