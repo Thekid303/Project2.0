@@ -10,14 +10,11 @@
           <div class="card-body">
             <p class="card-text">{{body}}</p>
             <h5>DUE DATE: {{date}}</h5>
-            <p>BUDGET: {{budget}}</p>
-            <p>STATUS: {{status}}</p>
             <a class="btn-sm btn-warning text-white text-decoration-none" href="/dashboard/edit/{{id}}">EDIT</a>
             <a class="btn-sm btn-success text-white text-decoration-none" href="/dashboard/budget/{{id}}">BUDGET</a>
-            
           </div>
         <div class="card-footer text-muted">
-          Posted by {{User.username}} on {{format_date createdAt}}
+          Created on {{format_date createdAt}}
         </div>
       </div>
     </div>
