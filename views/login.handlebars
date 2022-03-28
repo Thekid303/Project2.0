@@ -1,9 +1,9 @@
 <div class="container">
-  <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-  <h1 class="h3 mb-3 fw-normal">Don't have an account?
-    <a href="/signup">Sign Up here</a></h1>
-  <br />
-  <div id="logInError" class="error bg-danger text-white"></div>
+  <div class="row m-4">
+    <div class="card-header center rounded bg-light text-dark">
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+      <br>
+      <div id="logInError" class="error bg-danger text-white"></div>
   <form id="login-form" class="card-body">
     <div>
       <label for="username-input-login" class="col-sm-2 col-form-label">Username</label>
@@ -13,12 +13,11 @@
       <label for="password-input-login" class="col-sm-2 col-form-label">Password</label>
       <input type="password" id="password-input-login" />
     </div>
-    <button
-      class="w-100 btn btn-lg btn-primary"
-      type="submit"
-      id="login-btn"
-      class="w-100 btn btn-lg btn-primary"
-    >LOG IN</button>
+    <button class=" btn btn-primary" type="submit" id="login-btn">LOG IN</button>
+    <p class="mb-3 my-2 fw-normal">Don't have an account?
+      <a href="/signup">Sign Up here</a>
+    </p>
+
   </form>
 </div>
 
