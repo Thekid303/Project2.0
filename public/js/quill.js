@@ -10,3 +10,6 @@ var quill = new Quill('#editor', {
   theme: 'snow'  
 });
 
+// var quill = new Quill('#editor', {
+//     theme: 'snow'
+//   });

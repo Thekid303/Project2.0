@@ -9,7 +9,7 @@ body {
   font-size: 1.2rem;
 }
 footer {
-  /* position: fixed; */
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -29,6 +29,3 @@ footer a:link {
 footer a:hover {
   color: gold;
 }
-
-
-
