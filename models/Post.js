@@ -9,7 +9,7 @@ Post.init(
     body: DataTypes.STRING,
     boss: DataTypes.STRING, 
     rate: DataTypes.INTEGER, 
-    date: DataTypes.DATE,
+    date: DataTypes.STRING,
   },
   {
     sequelize
