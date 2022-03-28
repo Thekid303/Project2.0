@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="row m-4">
     <div class="card-header center rounded bg-light text-dark">
@@ -5,41 +6,47 @@
       <div class="row">
         <form id="edit-post-form" class="new-post-form card-body">
         <input type="hidden" name="post-id" value="{{post.id}}" />
+
       </div>
-      <div>
-        <label class="col-sm-3 col-form-label" for="post-title">Project Name</label>
+        <div>
+        <label class="col-sm-2 col-form-label" for="post-title">Project Name</label>
         <input type="text" name="post-title" class="form-input" value="{{post.title}}">
       </div>
 
+      {{!-- <div class="form-group">
+        <label class="form-label" for="editor">Project Content</label>
+        <textarea id="editor" name="post-body" class="form-control">{{post.body}}</textarea>
+      </div> --}}
 
-          <div id="editor">
+          <div class="form-group">
         <label class="form-label" for="editor">Project Description</label>
         <textarea id="editor" name="post-body" class="form-control">{{post.body}}</textarea>
       </div>
 
-      <div>
-        <label class="col-sm-3 col-form-label" for="post-boss">Add Employee to Project</label>
-        <input type="text" name="post-boss" value="{{post.boss}}" class="form-input"placeholder="Coming Soon"></input>
-      </div>
+      
+        <div>
+          <label class="col-sm-2 col-form-label" for="post-boss">Add Employee to Project</label>
+          <input type="text" name="post-boss" value="{{post.boss}}" class="form-input"placeholder="Coming Soon"></input>
+        </div>
 
-      <div>
-        <label class="col-sm-3 col-form-label" for="post-rate">Budget</label>
-        <input type="text" name="post-rate" value="{{post.rate}}" class="form-input" placeholder="Coming Soon"></input>
-      </div>
+        <div>
+          <label class="col-sm-2 col-form-label" for="post-rate">Budget</label>
+          <input type="text" name="post-rate" value="{{post.rate}}" class="form-input" placeholder="Coming Soon"></input>
+        </div>
 
-      <div>
-        <label class="col-sm-3 col-form-label" for="post-date">Due Date</label>
-        <input type="date" id="date" value="{{date}}" class="form-input"></input>
-      </div>
+        <div>
+          <label class="col-sm-2 col-form-label" for="post-date">Due Date</label>
+          <input type="date" id="date" value="{{post.date}}" class="form-input"></input>
+        </div>
+
 
       </div>
-        <div class="row my-3">
-        <button type="submit" class="col-2 mx-2 btn btn-primary">Update</button>
-        <button type="button" id="delete-btn" class="mx-3 col-2 btn btn-danger">Delete</button>
-      </div>
+<div class="row my-3">
+    <button type="submit" class="col-2 mx-2 btn btn-primary">Update</button>
+    <button type="button" id="delete-btn" class="mx-3 col-2 btn btn-danger">Delete</button>
     </div>
-  </div>
 </div>
+
 <script src="/js/edit.js"></script>
-<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-<script>var quill = new Quill('#editor', { theme: 'snow' });
+{{!-- <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<script>var quill = new Quill('#editor', { theme: 'snow' }); --}}

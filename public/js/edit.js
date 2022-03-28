@@ -5,7 +5,7 @@ const editFormHandler = async function(event) {
 
   const title = document.querySelector('input[name="post-title"]').value;
   const body = document.querySelector('textarea[name="post-body"]').value;
-  
+
 
 
   await fetch(`/api/post/${postId}`, {
@@ -13,6 +13,7 @@ const editFormHandler = async function(event) {
     body: JSON.stringify({
       title,
       body, 
+
     }),
     headers: {
       'Content-Type': 'application/json'
