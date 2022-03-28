@@ -16,7 +16,7 @@ const loginFormHandler = async function(event) {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert('Failed to login');
+    window.alert('USER NAME OR PASSWORD INCORRECT, PLEASE TRY AGAIN!');
   }
 };
 
