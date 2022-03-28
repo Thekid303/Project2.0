@@ -1,6 +1,10 @@
 #editor {
   height: 375px;
 }
+
+body {
+  background-image: url(/images/beach.jpg);
+}
 .error {
   font-size: 1.2rem;
 }
