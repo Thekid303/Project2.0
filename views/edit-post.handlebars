@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container p-3 bg-light text-dark">
   <h1>Edit Project</h1>
 
 <div class="card-header">
@@ -18,32 +18,21 @@
 
       
         <div>
-          <label class="col-sm-2 col-form-label" for="post-boss">Employer</label>
-          <input type="text" name="post-boss" value="{{post.boss}}" class="form-input"</input>
+          <label class="col-sm-2 col-form-label" for="post-boss">Add Employee to Project</label>
+          <input type="text" name="post-boss" value="{{post.boss}}" class="form-input"placeholder="Coming Soon"></input>
         </div>
 
         <div>
           <label class="col-sm-2 col-form-label" for="post-rate">Budget</label>
-          <input type="text" name="post-rate" value="{{post.rate}}" class="form-input"></input>
+          <input type="text" name="post-rate" value="{{post.rate}}" class="form-input" placeholder="Coming Soon"></input>
         </div>
 
         <div>
           <label class="col-sm-2 col-form-label" for="post-date">Due Date</label>
           <input type="date" id="date" value="{{post.date}}" class="form-input"></input>
         </div>
-        
-        <div class="form-check">
-          <input class="form-check-input col-sm-2 col-form-label" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-          <label class="form-check-label" for="exampleRadios1">
-            On Hold
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input col-sm-2 col-form-label" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-          <label class="form-check-label" for="exampleRadios2">
-            Completed
-          </label>
-        </div>
+
+
       </div>
 <div class="row my-3">
     <button type="submit" class="col-2 mx-2 btn btn-primary">Update</button>
